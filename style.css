@@ -1,0 +1,131 @@
+body {
+    background-color: #f2f2f2;
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+  
+  .calculator {
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    width: 260px;
+}
+  
+  #display {
+    width: 240px;
+    height: 40px;
+    font-size: 24px;
+    padding: 5px 10px;
+    text-align: right;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    background-color: #fefefe;
+    color: #000;
+    font-family: 'Courier New', monospace;
+}
+  
+  .buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+}
+  
+  button {
+    padding: 12px;
+    font-size: 18px;
+    background-color: #e0e0e0;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+  
+  button:hover {
+    background-color: #d0d0d0;
+}
+  
+  button.zero {
+    grid-column: span 2;
+}
+
+  /* DARK MODE */
+:root {
+    --bg: #f2f2f2;
+    --panel: #ffffff;
+    --text: #000;
+    --btn: #e0e0e0;
+    --btn-hover: #d0d0d0;
+}
+  
+  body.dark {
+    --bg: #1e1e1e;
+    --panel: #2c2c2c;
+    --text: #ffffff;
+    --btn: #444;
+    --btn-hover: #666;
+}
+  
+  body {
+    background-color: var(--bg);
+    color: var(--text);
+    transition: background 0.3s ease, color 0.3s ease;
+}
+  
+  .calculator {
+    background-color: var(--panel);
+    transition: background 0.3s ease;
+}
+  
+  #display {
+    background-color: #fff;
+    color: #000;
+}
+  
+  body.dark #display {
+    background-color: #333;
+    color: #fff;
+}
+  
+  /* TOMBOL */
+  button {
+    background-color: var(--btn);
+    transition: background 0.2s, transform 0.1s;
+}
+  
+  button:hover {
+    background-color: var(--btn-hover);
+}
+  
+  button:active {
+    transform: scale(0.95);
+}
+  
+  /* POSISI DARK MODE SWITCH */
+  .theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+  
+  .theme-toggle label {
+    font-weight: bold;
+    color: var(--text);
+    cursor: pointer;
+    user-select: none;
+}
+  
+  #themeSwitch {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+} 
